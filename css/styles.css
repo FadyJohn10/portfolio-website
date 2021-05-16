@@ -1,3 +1,40 @@
+body {
+  font-family: monospace;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* start navbar section */
+
+a.navbar-brand {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.nav-link {
+  color: #ccc;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #ff4d5a !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    font-size: 18px;
+  }
+}
+
+/* start full page section */
 #fullpage {
   height: 100vh;
 }
@@ -25,19 +62,6 @@
   background: yellow;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
-body {
-  font-family: "Lato";
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 #particles-js,
 #parallax,
 .layer,
@@ -57,7 +81,6 @@ body {
   font-size: 5.5em;
   font-weight: 100;
   letter-spacing: 5px;
-  font-family: monospace;
   position: absolute;
   top: 28%;
   left: 12%;
@@ -82,6 +105,7 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   padding-top: 15px;
+  box-shadow: 5px 20px 50px;
 }
 
 #parallax a {
