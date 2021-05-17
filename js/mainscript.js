@@ -3,7 +3,14 @@
 $(function () {
 
     //activate fullpage scroll  
-    $("#fullpage").fullpage();
+    $('#fullpage').fullpage({
+		//options here
+		autoScrolling:true,
+		scrollHorizontally: true
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(false);
 
 
     //parallax movement

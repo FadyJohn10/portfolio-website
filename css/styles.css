@@ -10,6 +10,10 @@ body {
   user-select: none;
 }
 
+.fp-tableCell {
+  vertical-align: unset;
+}
+
 /* start navbar section */
 
 a.navbar-brand {
@@ -45,11 +49,11 @@ a.navbar-brand {
 
 #fullpage section:nth-child(1) {
   background: #17182f;
-  background: linear-gradient(#17182f, #000);
+  background: linear-gradient(#000, #17182f);
 }
 
 #fullpage section:nth-child(2) {
-  background: red;
+  background: #17182f;
 }
 
 #fullpage section:nth-child(3) {
@@ -62,13 +66,13 @@ a.navbar-brand {
   background: yellow;
 }
 
+/* start section1 */
 #particles-js,
 #parallax,
 .layer,
 .some-space,
 .some-more-space {
   height: 100%;
-  position: absolute;
   width: 100%;
 }
 
@@ -150,4 +154,14 @@ a.navbar-brand {
   100% {
     transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
   }
+}
+
+/* start section2 */
+
+#section2 img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 500px;
+  transform: translateX(-50%);
 }
