@@ -3,37 +3,27 @@
 $(function () {
 
     //activate fullpage scroll  
-    $('#fullpage').fullpage({
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: false
-	});
+    $('#fullpage').fullpage();
 
-	//methods
-	$.fn.fullpage.setAllowScrolling(false);
-
-  /* ===============================  Mouse effect  =============================== */
-
-function mousecursor() {
-    if ($("body")) {
-        const e = document.querySelector(".cursor-inner"),
-            t = document.querySelector(".cursor-outer");
-        let n, i = 0,
-            o = !1;
-        window.onmousemove = function (s) {
-            o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-        }, $("body").on("mouseenter", "a, .cursor-pointer", function () {
-            e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
-        }), $("body").on("mouseleave", "a, .cursor-pointer", function () {
-            $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-        }), e.style.visibility = "visible", t.style.visibility = "visible"
-    }
-};
-
-$(function () {
-    mousecursor();
-});
-
+    // Mouse effect
+    function mousecursor() {
+        if ($("body")) {
+            const e = document.querySelector(".cursor-inner"),
+                t = document.querySelector(".cursor-outer");
+            let n, i = 0,
+                o = !1;
+            window.onmousemove = function (s) {
+                o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
+            }, $("body").on("mouseenter", "a, .cursor-pointer", function () {
+                e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
+            }), $("body").on("mouseleave", "a, .cursor-pointer", function () {
+                $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+            }), e.style.visibility = "visible", t.style.visibility = "visible"
+        }
+    };
+    $(function () {
+        mousecursor();
+    });
 
     //parallax movement
      $('#parallax').parallax({
@@ -42,7 +32,6 @@ $(function () {
         scalarX: 8,
         frictionY: 0.1
     });
-
 
     /////////////// typewriter effect
     function tapeWriter() {
@@ -54,7 +43,6 @@ $(function () {
         clearInterval(interval);
       }
     }
-   
     var message = 'Web Developer | Graphic Designer';
     var i = 0; 
     var interval = setInterval(tapeWriter, 70);
@@ -67,7 +55,7 @@ $(function () {
           "value": 555,
           "density": {
             "enable": true,
-            "value_area": 789.1476416322727
+            "value_area": 789
           }
         },
         "color": {
@@ -89,7 +77,7 @@ $(function () {
           }
         },
         "opacity": {
-          "value": 0.48927153781200905,
+          "value": 0.49,
           "random": false,
           "anim": {
             "enable": true,
@@ -151,7 +139,7 @@ $(function () {
             }
           },
           "bubble": {
-            "distance": 83.91608391608392,
+            "distance": 84,
             "size": 1,
             "duration": 3,
             "opacity": 1,
