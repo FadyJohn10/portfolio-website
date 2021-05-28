@@ -1,3 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+}
+
+.loading-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+}
+.loading-text span {
+  display: inline-block;
+  margin: 0 5px;
+  color: #ff4d5a;
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 2rem;
+}
+.loading-text span:nth-child(1) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0s infinite linear alternate;
+  animation: blur-text 1.5s 0s infinite linear alternate;
+}
+.loading-text span:nth-child(2) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0.2s infinite linear alternate;
+  animation: blur-text 1.5s 0.2s infinite linear alternate;
+}
+.loading-text span:nth-child(3) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0.4s infinite linear alternate;
+  animation: blur-text 1.5s 0.4s infinite linear alternate;
+}
+.loading-text span:nth-child(4) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0.6s infinite linear alternate;
+  animation: blur-text 1.5s 0.6s infinite linear alternate;
+}
+.loading-text span:nth-child(5) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 0.8s infinite linear alternate;
+  animation: blur-text 1.5s 0.8s infinite linear alternate;
+}
+.loading-text span:nth-child(6) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 1s infinite linear alternate;
+  animation: blur-text 1.5s 1s infinite linear alternate;
+}
+.loading-text span:nth-child(7) {
+  filter: blur(0px);
+  -webkit-animation: blur-text 1.5s 1.2s infinite linear alternate;
+  animation: blur-text 1.5s 1.2s infinite linear alternate;
+}
+
+@-webkit-keyframes blur-text {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(4px);
+  }
+}
+
+@keyframes blur-text {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(4px);
+  }
+}
+
 body {
   font-family: monospace;
   overflow: hidden;
@@ -10,10 +94,6 @@ body {
   user-select: none;
   cursor: none;
   scroll-behavior: smooth;
-}
-
-.fp-tableCell {
-  vertical-align: unset;
 }
 
 .mouse-cursor {
@@ -103,18 +183,7 @@ a.navbar-brand {
 }
 
 #fullpage section:nth-child(1) {
-  background: #17182f;
   background: linear-gradient(#000, #1b1c21);
-}
-
-#fullpage section:nth-child(3) {
-  background: blue;
-}
-#fullpage section:nth-child(4) {
-  background: violet;
-}
-#fullpage section:nth-child(5) {
-  background: yellow;
 }
 
 /* start section1 */
@@ -208,14 +277,87 @@ a.navbar-brand {
 }
 
 /* start section2 */
+
 #fullpage section:nth-child(2) {
+  background: linear-gradient(to right, #131417, #1b1c21);
+  overflow: hidden;
+}
+
+#section2 .shadow-title {
+  position: absolute;
+  top: 0;
+  margin-top: 30px;
+  right: 0px;
+  text-align: right;
+  font-family: "Muli", sans-serif;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  font-size: 11vw;
+  line-height: 1;
+  color: rgba(200, 200, 200, 0.1);
+  background: linear-gradient(
+    -90deg,
+    rgba(200, 200, 200, 0),
+    rgba(200, 200, 200, 0.1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  z-index: 1;
+}
+
+marquee {
+  font-size: 6rem;
+  font-family: "Muli", sans-serif;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+#section2 img {
+  width: 88%;
+  position: relative;
+  margin-top: 55px;
+}
+
+#section2 .text {
+  width: 80%;
+  margin-top: 100px;
+  color: #ccc;
+}
+
+#section2 .text p {
+  margin-top: 25px;
+  color: rgba(170, 170, 170, 0.5);
+}
+
+#section2 .text a {
+  color: #ff4d5a;
+  border: 1px solid #ff4d5a;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 200ms ease;
+  padding: 5px 20px;
+  margin-right: 20px;
+}
+#section2 .text a:hover {
+  color: #fff;
+}
+
+/* start section3 */
+#fullpage section:nth-child(3) {
   background: #1b1c21;
   color: #fff;
   overflow: hidden;
   font-family: sans-serif;
 }
 
-#section2 img {
+#section3 img {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -223,23 +365,23 @@ a.navbar-brand {
   transform: translateX(-50%);
 }
 
-.shadow-title {
+#section3 .shadow-title {
   position: absolute;
   top: 0;
   margin-top: 30px;
-  left: 20px;
+  left: 10px;
   width: 100%;
   height: 300%;
   text-align: left;
   font-family: "Muli", sans-serif;
   -webkit-writing-mode: vertical-lr;
   writing-mode: vertical-lr;
-  font-size: 16vw;
+  font-size: 12vw;
   line-height: 1;
   color: rgba(200, 200, 200, 0.1);
   background: linear-gradient(
     90deg,
-    rgba(200, 200, 200, 0),
+    rgba(200, 200, 200, 0.01),
     rgba(200, 200, 200, 0.5)
   );
   -webkit-background-clip: text;
@@ -248,13 +390,13 @@ a.navbar-brand {
   z-index: 0;
 }
 
-#section2 .container {
+#section3 .container {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-#section2 .container:before {
+#section3 .container:before {
   content: "";
   position: absolute;
   left: -160%;
@@ -310,16 +452,16 @@ a.navbar-brand {
   filter: brightness(0.25);
 }
 .ms--images .ms-slide:nth-child(1) .ms-slide__image {
-  background-image: url("../images/work2.png");
+  background-image: url("../images/work1.png");
 }
 .ms--images .ms-slide:nth-child(2) .ms-slide__image {
-  background-image: url("../images/work3.png");
+  background-image: url("../images/work2.png");
 }
 .ms--images .ms-slide:nth-child(3) .ms-slide__image {
-  background-image: url("../images/work4.png");
+  background-image: url("../images/work3.png");
 }
 .ms--images .ms-slide:nth-child(4) .ms-slide__image {
-  background-image: url("https://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/jurica-koletic-321003-unsplash.jpg");
+  background-image: url("../images/work4.png");
 }
 .ms--images .ms-slide__image-container {
   width: 80%;
@@ -376,7 +518,7 @@ a.navbar-brand {
 .ms--numbers .ms-slide {
   font-size: 8.5em;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.15);
 }
 
 .ms--titles {
@@ -567,4 +709,89 @@ a.navbar-brand {
   .ms--titles .ms-slide {
     transform: scale(0.8);
   }
+}
+
+/* start section4 */
+
+#fullpage section:nth-child(4) {
+  background: linear-gradient(#1b1c21, #000);
+}
+
+#section4 .shadow-title {
+  position: absolute;
+  top: 0;
+  margin-top: 20px;
+  right: 0px;
+  text-align: right;
+  font-family: "Muli", sans-serif;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  font-size: 8.5vw;
+  line-height: 1;
+  color: rgba(200, 200, 200, 0.1);
+  background: linear-gradient(
+    -90deg,
+    rgba(200, 200, 200, 0),
+    rgba(200, 200, 200, 0.1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  z-index: 1;
+}
+
+.contact .extra-title {
+  color: #fff;
+  margin-top: 80px;
+}
+
+.contact .form input,
+.contact .form textarea {
+  color: #fff;
+  width: 100%;
+  padding: 15px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input.form-btn {
+  color: #fff;
+  font-size: 17px;
+  background: none;
+  width: 40% !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px 20px !important;
+}
+
+.contact .form textarea {
+  padding: 15px;
+  min-height: 140px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.contact a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #999;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+#section4 .social i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-right: 5px;
+  font-size: 17px;
+  color: #999;
+  text-decoration: none;
+  margin-top: 10px;
 }

@@ -2,6 +2,12 @@
 
 $(function () {
 
+  $(document).ready(function () {
+        
+        $('.loading').fadeOut();
+        
+    });
+
     //activate fullpage scroll  
     $('#fullpage').fullpage();
 
@@ -43,7 +49,7 @@ $(function () {
         clearInterval(interval);
       }
     }
-    var message = 'Web Developer | Graphic Designer';
+    var message = 'Web Developer | UX UI Designer';
     var i = 0; 
     var interval = setInterval(tapeWriter, 70);
 
@@ -184,7 +190,7 @@ $(function () {
         'STEM October',
         'Youth Science Journal',
         'TEDx MaadiSTEM',
-        'Windy Sunset'
+        'STEM MAL'
     ];
     var msTitles = new MomentumSlider({
         el: slidersContainer,
