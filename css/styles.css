@@ -173,6 +173,17 @@ a.navbar-brand {
   }
 }
 
+@media screen and (max-width: 991px) {
+  .navbar {
+    background-color: #131417;
+    padding: 0.2rem !important;
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
 /* start full page section */
 #fullpage {
   height: 100vh;
@@ -223,13 +234,33 @@ a.navbar-brand {
 
 #parallax img {
   position: relative;
-  left: 58%;
-  top: 15%;
+  left: 50%;
+  transform: translate(20%, -45%);
+  top: 50%;
   width: 450px;
   border: 3px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   padding-top: 15px;
   box-shadow: 5px 20px 50px;
+}
+
+@media screen and (max-width: 500px) {
+  #parallax h1 {
+    font-size: 2.3rem;
+    top: 65%;
+    left: 18%;
+  }
+  #parallax img {
+    width: 280px;
+    transform: translate(-50%, -75%);
+  }
+  #parallax h1 span {
+    font-size: 18px;
+  }
+  #parallax a {
+    bottom: 8%;
+    top: unset !important;
+  }
 }
 
 #parallax a {
@@ -322,12 +353,30 @@ marquee {
   width: 88%;
   position: relative;
   margin-top: 55px;
+  border-radius: 10px;
 }
 
 #section2 .text {
   width: 80%;
   margin-top: 100px;
   color: #ccc;
+}
+
+@media screen and (max-width: 500px) {
+  #section2 img {
+    width: 70%;
+    margin-top: 75px;
+  }
+  #section2 .text {
+    width: 100%;
+    margin-top: 10px;
+  }
+  #section2 .text p {
+    margin-top: 0px !important;
+  }
+  #section2 .text a {
+    margin-top: 0 !important;
+  }
 }
 
 #section2 .text p {
@@ -344,9 +393,17 @@ marquee {
   transition: all 200ms ease;
   padding: 5px 20px;
   margin-right: 20px;
+  margin-top: 20px;
+  display: inline-block;
 }
 #section2 .text a:hover {
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  #section2 .text p span {
+    display: inline !important;
+  }
 }
 
 /* start section3 */
@@ -685,7 +742,7 @@ marquee {
 
   .ms--titles {
     left: calc(50% - 200px);
-    top: calc(50% - 135px);
+    top: calc(50% - 120px);
     text-align: center;
   }
 
@@ -696,8 +753,11 @@ marquee {
 
   .pagination {
     left: 50%;
-    top: calc(100% - 50px);
+    top: calc(100% - 120px);
     transform: translateX(-50%);
+  }
+  .ms--images {
+    top: 15px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -708,6 +768,29 @@ marquee {
 @media screen and (max-width: 400px) {
   .ms--titles .ms-slide {
     transform: scale(0.8);
+  }
+}
+
+#section3 .see-more {
+  color: #ff4d5a;
+  border: 1px solid #ff4d5a;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 200ms ease;
+  padding: 5px 20px;
+  width: 118px;
+  margin-left: auto;
+  z-index: 1;
+}
+#section3 .see-more:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  #section3 .see-more {
+    margin-right: auto;
+    margin-top: 10px;
   }
 }
 
@@ -742,7 +825,17 @@ marquee {
 
 .contact .extra-title {
   color: #fff;
-  margin-top: 80px;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .contact .extra-title {
+    margin-top: 1.1rem;
+  }
+  .contact .form textarea {
+    min-height: auto !important;
+    margin-top: 15px !important;
+  }
 }
 
 .contact .form input,
@@ -772,6 +865,20 @@ input.form-btn {
   border: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 30px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .contact .extra-title {
+    margin-top: 1.65rem;
+  }
+  .contact .form textarea {
+    min-height: auto !important;
+    margin-top: 15px !important;
+  }
+  .contact input.form-btn {
+    margin-top: 10px !important;
+    font-size: 14px;
+  }
 }
 
 .contact a {
