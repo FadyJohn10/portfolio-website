@@ -2,14 +2,10 @@
 
 $(function () {
 
-  $(document).ready(function () {
-        
-        $('.loading').fadeOut();
-        
+  $(window).on("load", function () {
+        $(".loading").delay(1000).fadeOut();
     });
 
-    //activate fullpage scroll  
-    $('#fullpage').fullpage();
 
     // Mouse effect
     function mousecursor() {
@@ -30,6 +26,10 @@ $(function () {
     $(function () {
         mousecursor();
     });
+
+    
+    //activate fullpage scroll  
+    $('#fullpage').fullpage();
 
     //parallax movement
      $('#parallax').parallax({

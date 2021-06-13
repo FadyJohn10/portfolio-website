@@ -88,10 +88,6 @@ body {
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   cursor: none;
   scroll-behavior: smooth;
 }
@@ -311,7 +307,7 @@ a.navbar-brand {
 
 /* start section2 */
 
-#fullpage section:nth-child(2) {
+#section2 {
   background: linear-gradient(to right, #131417, #1b1c21);
   overflow: hidden;
 }
