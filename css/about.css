@@ -85,7 +85,6 @@
 body {
   font-family: monospace;
   overflow-x: hidden;
-  height: 2222px;
   -webkit-font-smoothing: antialiased;
   cursor: none;
   scroll-behavior: smooth;
@@ -183,14 +182,14 @@ a.navbar-brand {
 /* start section2 */
 
 #section2 {
-  padding: 50px 0;
+  padding-bottom: 50px;
   width: 100%;
 }
 
 .shadow-title {
   position: absolute;
   top: 300px;
-  margin-top: 30px;
+  left: -10px;
   text-align: right;
   font-family: "Muli", sans-serif;
   -webkit-writing-mode: vertical-lr;
@@ -244,28 +243,6 @@ a.navbar-brand {
   color: rgba(170, 170, 170, 0.5);
 }
 
-#section2 .text a {
-  color: #ff4d5a;
-  border: 1px solid #ff4d5a;
-  border-radius: 12px;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  transition: all 200ms ease;
-  padding: 5px 20px;
-  margin-right: 20px;
-  margin-top: 20px;
-  display: inline-block;
-}
-#section2 .text a:hover {
-  color: #fff;
-}
-
-@media screen and (min-width: 768px) {
-  #section2 .text p span {
-    display: inline !important;
-  }
-}
-
 /* skills section */
 
 .skills {
@@ -277,6 +254,8 @@ a.navbar-brand {
   position: relative;
   font-style: oblique;
   font-size: 2.2rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
 }
 .section-head::after {
   content: "";
@@ -287,4 +266,163 @@ a.navbar-brand {
   left: 50%;
   margin-left: -40px;
   top: 50px;
+}
+
+.skills .progress {
+  margin-bottom: 20px;
+  background-color: #252525 !important;
+  height: 11px;
+}
+
+.skills span {
+  color: #ddd;
+}
+
+/* passion */
+
+.passion {
+  padding: 50px 0;
+}
+
+.passion h4 {
+  color: #eee;
+  margin-bottom: 10px;
+}
+.passion q {
+  color: #aaa;
+  width: 85%;
+}
+
+.passion i {
+  color: #ff4d5a;
+  font-size: 3.5em;
+  margin: 15px 0;
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+/* start quote box */
+
+.quote-box {
+  background: url("../images/about-quotee.jpg") fixed center center;
+}
+
+.quote {
+  font-family: "Muli", sans-serif;
+  line-height: 1;
+  font-size: 2.2rem;
+  font-weight: 900;
+  padding: 80px 0;
+}
+
+/* start courses section */
+
+.courses {
+  padding: 50px 0;
+  height: 1000px;
+  overflow: hidden;
+  position: relative;
+}
+
+.courses .container-fluid {
+  width: 95% !important;
+}
+
+.enabled {
+  height: auto !important;
+}
+
+.courses::after {
+  content: "";
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(
+    0deg,
+    rgba(25, 25, 25, 0.99),
+    rgba(25, 25, 25, 0.9),
+    rgba(25, 25, 25, 0)
+  );
+}
+
+.courses #user_button {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  z-index: 22;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 5em;
+  transition: 1s ease-in-out;
+  animation: jump 3s infinite;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 8px;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 8px;
+  }
+}
+
+.courses .card {
+  width: 95%;
+  background-color: #252525;
+  color: #ccc;
+  margin-bottom: 20px !important;
+  margin: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .courses .card {
+    margin-top: 0 !important;
+  }
+}
+
+.courses .card img {
+  height: 210px;
+}
+
+.courses .card-title {
+  text-align: center;
+  color: #ff4d5a;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.courses h6 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.courses .card-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9em;
+}
+
+.courses .btn {
+  display: block !important;
+  margin: auto;
+  width: 50%;
 }

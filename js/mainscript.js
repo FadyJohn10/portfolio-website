@@ -6,6 +6,11 @@ $(function () {
         $(".loading").delay(1000).fadeOut();
     });
 
+  $('#user_button').click(function () {
+      $('.user_button_icon').toggleClass("fa-caret-up");
+      $('.courses').toggleClass("enabled"); 
+  });
+
 
     // Mouse effect
     function mousecursor() {
