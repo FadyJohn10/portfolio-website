@@ -2,10 +2,9 @@
 
 $(function () {
 
-  $(window).on("load", function () {
-        alert("ready");
-        $(".loading").delay(1000).fadeOut();
-    });
+  $(document).ready(function() {
+    $(".loading").delay(1000).fadeOut();
+  });
 
   $('#user_button').click(function () {
       $('.user_button_icon').toggleClass("fa-caret-up");
