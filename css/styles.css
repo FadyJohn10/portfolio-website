@@ -382,6 +382,9 @@ marquee {
   #section2 .text a {
     margin-top: 0 !important;
   }
+  marquee {
+    font-size: 3rem !important;
+  }
 }
 
 #section2 .text p {
@@ -794,7 +797,7 @@ marquee {
   color: #fff;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 350px) {
   #section3 .see-more {
     margin-right: auto;
     margin-top: 10px;
@@ -803,7 +806,8 @@ marquee {
 @media screen and (max-width: 500px) {
   #section3 .see-more {
     margin-right: auto;
-    bottom: 15px;
+    bottom: 10px;
+    position: relative;
   }
   .pagination {
     left: 50%;
