@@ -27,11 +27,10 @@ $(function () {
                 const updateCounter = () => {
                     const target = +counter.getAttribute("data-target");
                     const count = +counter.innerText;
-                    const increment = target / 250;
 
                     if (count < target) {
-                        counter.innerText = count + increment;
-                        setTimeout(updateCounter, 1);
+                        counter.innerText = count + 0.25;
+                        setTimeout(updateCounter, 5);
                     } else counter.innerText = target;
 
                 };
