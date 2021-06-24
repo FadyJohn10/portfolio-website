@@ -245,7 +245,7 @@ a.navbar-brand {
   #parallax h1 {
     font-size: 2.3rem;
     top: 65%;
-    left: 18%;
+    left: 15%;
   }
   #parallax img {
     width: 280px;
@@ -258,6 +258,13 @@ a.navbar-brand {
   #parallax a {
     bottom: 8%;
     top: unset !important;
+  }
+  .some-space {
+    animation: none !important;
+  }
+
+  .some-more-space {
+    animation: none !important;
   }
 }
 
@@ -393,6 +400,8 @@ marquee {
   margin-right: 20px;
   margin-top: 20px;
   display: inline-block;
+  position: relative;
+  z-index: 2;
 }
 #section2 .text a:hover {
   color: #fff;
@@ -785,10 +794,21 @@ marquee {
   color: #fff;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   #section3 .see-more {
     margin-right: auto;
     margin-top: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #section3 .see-more {
+    margin-right: auto;
+    bottom: 15px;
+  }
+  .pagination {
+    left: 50%;
+    top: calc(100% - 220px);
+    transform: translateX(-50%);
   }
 }
 
