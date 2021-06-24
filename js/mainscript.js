@@ -6,11 +6,60 @@ $(function () {
     $(".loading").delay(1000).fadeOut();
   });
 
+
+  // about page courses expand
   $('#user_button').click(function () {
       $('.user_button_icon').toggleClass("fa-caret-up");
       $('.courses').toggleClass("enabled"); 
       $('.space').toggleClass("d-block"); 
   });
+
+  $(window).scroll(function() {
+   var hT = $('.countersec').offset().top,
+       hH = $('.countersec').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+   if (wS > (hT+hH-wH)){
+       const counters = document.querySelectorAll(".counter");
+
+            counters.forEach((counter) => {
+
+                const updateCounter = () => {
+                    const target = +counter.getAttribute("data-target");
+                    const count = +counter.innerText;
+                    const increment = target / 250;
+
+                    if (count < target) {
+                        counter.innerText = count + increment;
+                        setTimeout(updateCounter, 1);
+                    } else counter.innerText = target;
+
+                };
+
+                updateCounter();
+
+            });
+   }
+});
+
+  //portfolio
+
+    $('.portfolio li').click(function () {
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        if ($(this).data('class') === 'all') {
+
+            $('.shuffle-images img').css('opacity', 1);
+
+        } else {
+
+            $('.shuffle-images img').css('opacity', '.1');
+            $($(this).data('class')).css('opacity', 1);
+
+        }
+
+    });
 
 
     // Mouse effect

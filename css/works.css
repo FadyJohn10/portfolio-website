@@ -144,6 +144,26 @@ body {
   opacity: 0;
 }
 
+.section-head {
+  text-align: center;
+  color: #eee;
+  position: relative;
+  font-style: oblique;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.section-head::after {
+  content: "";
+  background-color: #ff4d5a;
+  width: 80px;
+  height: 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  top: 50px;
+}
+
 /* start navbar section */
 
 a.navbar-brand {
@@ -179,16 +199,9 @@ a.navbar-brand {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
-/* start section2 */
-
-#section2 {
-  padding-bottom: 50px;
-  width: 100%;
-}
-
 .shadow-title {
   position: absolute;
-  top: 300px;
+  top: 1250px;
   left: -10px;
   text-align: right;
   font-family: "Muli", sans-serif;
@@ -208,228 +221,102 @@ a.navbar-brand {
   z-index: 10;
 }
 
-#section2 img {
-  width: 88%;
-  position: relative;
-  margin-top: 55px;
-  border-radius: 10px;
-}
+/* start featured work section */
 
-#section2 .text {
-  width: 80%;
+.featured-work .info {
+  width: 90%;
+  color: #eee;
   margin-top: 100px;
-  color: #ccc;
 }
 
-@media screen and (max-width: 500px) {
-  #section2 img {
-    width: 70%;
-    margin-top: 75px;
-  }
-  #section2 .text {
-    width: 100%;
-    margin-top: 10px;
-  }
-  #section2 .text p {
-    margin-top: 0px !important;
-  }
-  #section2 .text a {
-    margin-top: 0 !important;
-  }
-}
-
-#section2 .text p {
-  margin-top: 25px;
-  color: rgba(170, 170, 170, 0.5);
-}
-
-/* skills section */
-
-.skills {
-  padding: 50px 0;
-}
-.section-head {
-  text-align: center;
-  color: #eee;
-  position: relative;
-  font-style: oblique;
-  font-size: 2.2rem;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-}
-.section-head::after {
-  content: "";
-  background-color: #ff4d5a;
-  width: 80px;
-  height: 3px;
-  position: absolute;
-  left: 50%;
-  margin-left: -40px;
-  top: 50px;
-}
-
-.skills .progress {
-  margin-bottom: 20px;
-  background-color: #252525 !important;
-  height: 11px;
-}
-
-.skills span {
-  color: #ddd;
-}
-
-/* passion */
-
-.passion {
-  padding: 50px 0;
-}
-
-.passion h4 {
-  color: #eee;
-  margin-bottom: 10px;
-}
-.passion q {
+.featured-work p {
   color: #aaa;
-  width: 85%;
+  margin-bottom: 20px;
 }
 
-.passion i {
+/* start counter section */
+
+.countersec {
+  background: url("../images/about-quotee.jpg") center center fixed;
+  padding-top: 60px;
+  color: #fff;
+  text-align: center;
+}
+
+.countersec .counter {
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+.countersec span {
+  font-size: 1.3em;
+  margin-bottom: 60px;
+  display: block;
+}
+
+/* start portfolio section  */
+
+.portfolio,
+.featured-work {
+  padding: 50px 0;
+}
+
+.portfolio .list-unstyled {
+  margin-left: 0 !important;
+  margin-bottom: -15px;
+  max-width: 100%;
+}
+
+.portfolio li {
   color: #ff4d5a;
-  font-size: 3.5em;
-  margin: 15px 0;
-}
-
-.swiper-container {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-/* start quote box */
-
-.quote-box {
-  background: url("../images/about-quotee.jpg") fixed center center;
-}
-
-.quote {
-  font-family: "Muli", sans-serif;
-  line-height: 1;
-  font-size: 2.2rem;
-  font-weight: 900;
-  padding: 80px 0;
+  border: 1px solid #ff4d5a;
+  padding: 3px;
+  margin: 0 15px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 991px) {
-  .quote {
-    font-size: 1.35rem;
+  .portfolio li {
+    margin: 0 0 10px 0;
   }
 }
 
-/* start courses section */
+.portfolio li.active,
+.portfolio li:hover {
+  color: #fff;
+  background-color: #ff4d5a;
+}
 
-.courses {
-  padding: 50px 0;
-  height: 1000px;
-  overflow: hidden;
+.portfolio .shuffle-images {
+  margin: 50px 0 0;
+}
+
+.portfolio .work {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 25px;
   position: relative;
 }
 
-.courses .container-fluid {
-  width: 95% !important;
+.portfolio img {
+  max-width: 100%;
+  transition: all 0.25s ease-in-out;
 }
 
-.enabled {
-  height: auto !important;
-}
-
-.courses::after {
-  content: "";
-  position: absolute;
-  height: 250px;
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  background: linear-gradient(
-    0deg,
-    rgba(25, 25, 25, 0.99),
-    rgba(25, 25, 25, 0.9),
-    rgba(25, 25, 25, 0)
-  );
-}
-
-.courses #user_button {
-  position: absolute;
-  bottom: 50px;
+.portfolio figcaption {
+  color: #eee;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 22;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 5em;
-  transition: 1s ease-in-out;
-  animation: jump 3s infinite;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: none;
 }
 
-@keyframes jump {
-  0% {
-    bottom: 8px;
-  }
-  50% {
-    bottom: 0;
-  }
-  100% {
-    bottom: 8px;
-  }
+.portfolio .work:hover img {
+  filter: brightness(0.2);
 }
 
-.courses .card {
-  width: 95%;
-  background-color: #252525;
-  color: #ccc;
-  margin-bottom: 20px !important;
-  margin: auto;
-}
-
-@media screen and (max-width: 991px) {
-  .courses .card {
-    margin-top: 0 !important;
-  }
-}
-
-.courses .card img {
-  height: 210px;
-}
-
-.courses .card-title {
-  text-align: center;
-  color: #ff4d5a;
-  text-transform: capitalize;
-  font-family: sans-serif;
-  font-weight: 600;
-  font-size: 1.5em;
-}
-
-.courses h6 {
-  text-align: center;
-  font-weight: bold;
-}
-
-.courses .card-text {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.9em;
-}
-
-.courses .btn {
-  display: block !important;
-  margin: auto;
-  width: 50%;
+.portfolio .work:hover figcaption {
+  display: block;
 }
