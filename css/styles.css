@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
 .loading {
   position: fixed;
   top: 0;
@@ -363,7 +362,7 @@ marquee {
 
 #section2 .text {
   width: 80%;
-  margin-top: 100px;
+  margin-top: 80px;
   color: #ccc;
 }
 
