@@ -352,7 +352,7 @@ a.navbar-brand {
 .courses::after {
   content: "";
   position: absolute;
-  height: 250px;
+  height: 200px;
   width: 100%;
   bottom: 0;
   position: absolute;
