@@ -221,6 +221,23 @@ a.navbar-brand {
   color: #ccc;
 }
 
+#section2 .text a {
+  color: #ff4d5a;
+  border: 1px solid #ff4d5a;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 200ms ease;
+  padding: 4px 20px;
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+#section2 .text a:hover {
+  color: #fff;
+}
+
 @media screen and (max-width: 500px) {
   #section2 img {
     width: 70%;
